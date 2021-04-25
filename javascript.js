@@ -1,9 +1,9 @@
 var jsonObj;
-var APIKEY = "&APPID=ff64c247a136f706923...";
+//var APIKEY = "&APPID=88b6052f-b50c-4c37-ad60-e0a125f2d58f";//
 
 function loadJSONDoc() {
 
-var url = "https://api.openweathermap.org/data/2.5/weather?q=Helsinki,%20FI&units=Metric"+APIKEY;
+var url = "https://api.covid19api.com/summary"//+APIKEY;//
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.open("GET", url, true);
@@ -19,4 +19,5 @@ jsonObj = JSON.parse(xmlhttp.responseText);
 console.log(jsonObj);
 
 printJSONTable(jsonObj);
+
 }
