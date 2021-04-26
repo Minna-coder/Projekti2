@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(248, 192, 192);
+  }
+  
+  h1 {
+    color: white;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  
+  h2 {
+  color: darkblue;
+  font-size: 40px;
+  }
+  
+  legend {
+  color: darkblue;
+  font-size: 28px;
+  text-align: center;
+  
+  
+  }
