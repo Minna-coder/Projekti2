@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img src="covid.jpg" alt="Avatar" style="width:200px">
+<title>COVID-19 </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="csssecond.css"> 
 
-    <link rel="stylesheet" href="css.css"> 
-
-    
-    <title>Document</title>
-  
-</head>
 <body>
+    
+  <div class="sidenav">
+      <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID Suomessa</button></div></a>
+      <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID Ruotsissa</button></div></a>
+  </div>
+    
+  <div class="content">
+        <h2>Covid19 infoa</h2>
+  <p>Päivitä sivu selaimen refresh nuolesta!</p>   
+  <button type="button" onclick="loadJSONDoc()">Send AJAX Request for JSON</button>
+    <button type="button" onclick="loadDoc3()">Tässä Covid-lukemat kaikkialla</button>
 
-    <div id="demo">
-<h2>Covid19 infoa</h2>
-
-<style>
-  img {
-  border-radius: 50%;
+  <script>
+      function loadDoc3() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML =
+            this.responseText;
+          }
+        };
+        xmlhttp.open("GET", "https://api.covid19api.com/summary", true);
+        xmlhttp.send();
       }
-</style>
-</head>
-
-<button type="button" onclick="loadDoc()">Datapankki</button>
-</div>
+  </script>
+      
+  </div>
 
 
 <script>
+
 function loadDoc() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
@@ -37,14 +46,32 @@ function loadDoc() {
       this.responseText;
     }
   };
-  xmlhttp.open("GET", "https://api.covid19api.com/summary", true);
+  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/finland", true);
+  xmlhttp.send();
+}
+function loadDoc2() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/sweden", true);
   xmlhttp.send();
 }
 
+  
 
 
 </script>
 <script src="main.js"></script>
-    
+</head>   
+
 </body>
 </html>
+
+
+  
+    
+   
