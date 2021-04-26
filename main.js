@@ -1,3 +1,5 @@
+/* en saanut millään toimimaan */
+
 /*function printJSONTable(jsonObj) {
 
 	var data = jsonObj;
@@ -44,7 +46,7 @@ document. getElementById("tabledata").innerHTML = out;
 */
 var jsonObj;
 
-function loadDoc() {
+/*function loadDoc() {
 
 	var url = "https://api.covid19api.com/dayone/country/finland";
 	var xmlhttp = new XMLHttpRequest();
@@ -63,3 +65,4 @@ xmlhttp.onreadystatechange = function(){
 		printJSONTable(jsonObj);
 	
 }
+*/
