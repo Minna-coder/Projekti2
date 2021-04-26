@@ -11,13 +11,19 @@
   <div class="sidenav">
       <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID Suomessa</button></div></a>
       <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID Ruotsissa</button></div></a>
+      <a href="#"><div id="demo"><button type="button4" onclick="loadDoc4()">COVID Venäjällä</button></div></a>
   </div>
     
   <div class="content">
-        <h2>Covid19 infoa</h2>
-  <p>Päivitä sivu selaimen refresh nuolesta!</p>   
-  <button type="button" onclick="loadJSONDoc()">Send AJAX Request for JSON</button>
-    <button type="button" onclick="loadDoc3()">Tässä Covid-lukemat kaikkialla</button>
+        <h2>Covid-19 infoa</h2>
+  <p>Päivitä sivu selaimen refresh nuolesta! Nappien takaa pääset Suomen, Ruotsin ja globaaliin dataan.</p>
+  <p>Jotakin näin hienoa olisi kiva ollut saada aikaan! Lähde: <strong>Covid19api</strong> https://www.covidpanel.fr/</p><br>
+ 
+    <button type="button" onclick="loadDoc3()">COVID goes GLOBAL</button>
+    <button type="button" onclick="loadJSONDoc()">Send AJAX Request for JSON</button>
+    <br>
+
+    <img src="covidpanel.JPG" alt="covidpanel"/>
 
   <script>
       function loadDoc3() {
@@ -61,6 +67,17 @@ function loadDoc2() {
   xmlhttp.send();
 }
 
+function loadDoc4() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/russia", true);
+  xmlhttp.send();
+}
   
 
 
