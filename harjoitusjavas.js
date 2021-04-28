@@ -12,16 +12,14 @@ xmlhttp.onreadystatechange=function() {
     // Kaivetaan Suomen data esiin
          console.log ( data.Countries[58] );
     // Kaivetaan kenttäkohtaista dataa
-        console.log ( data.Countries[58].TotalConfirmed );
-        console.log ( data.Countries[58].TotalRecovered );
-        console.log ( data.Countries [58].Country );
+        // console.log ( data.Countries[58].TotalConfirmed );
+        // console.log ( data.Countries[58].TotalRecovered );
+        // console.log ( data.Countries [58].Country );
 
 
-        document.write ( data.Countries [58].Country );
-
-        document.write ( data.Countries [58].TotalConfirmed );
-        
-        document.write ( data.Countries [58].TotalRecovered );
+        // document.write ( data.Countries [58].Country );
+        // document.write ( data.Countries [58].TotalConfirmed );
+        // document.write ( data.Countries [58].TotalRecovered );
         
     }
 }
