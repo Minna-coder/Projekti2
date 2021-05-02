@@ -8,24 +8,9 @@
       color: #4CAF50;
     }
 
-    .button {
-      background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    
-    }
-
-
     p {
       text-indent: 18px;
-      text-align: start;
+      text-align: left;
       letter-spacing: normal;
     }
     body {
@@ -79,6 +64,7 @@
       color: black;
     }
     
+ 
     /* Style the content */
     .content {
       margin-left: 200px;
