@@ -18,6 +18,7 @@ xmlhttp.onreadystatechange=function() {
         console.log ( data.Countries[58].TotalConfirmed );
         console.log ( data.Countries[58].TotalRecovered );
     
+        document.write( data.Countries[58].TotalConfirmed );
     	printJSONTable(jsonObj);
     }
 }

@@ -18,7 +18,7 @@
         <h2>Covid-19 infoa</h2>
   <p>Päivitä sivu selaimen refresh nuolesta! Nappien takaa pääset Suomen, Ruotsin ja globaaliin dataan.</p>
   <p>Jotakin näin hienoa olisi kiva ollut saada aikaan! Lähde: <strong>Covid19api</strong> https://www.covidpanel.fr/</p><br>
-  <p>Select a city from the list:
+  <p>Valitse maa:
     <select name="mySelect" id="city" onchange="">
       <option value="Finland">Finland</option>
       <option value="Sweden">Sweden</option>
@@ -29,7 +29,7 @@
   Or type in a search query: <input id="citysearch"><button id="search">Search</button>
   </p>
 
-
+  
 
     <button type="button" onclick="loadDoc3()">COVID goes GLOBAL</button>
     <button type="button" onclick="loadJSONDoc()">Send AJAX Request for JSON</button>
@@ -71,6 +71,7 @@ function loadDoc2() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
       this.responseText;
+      
     }
   };
   xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/sweden", true);
@@ -89,7 +90,7 @@ function loadDoc4() {
   xmlhttp.send();
 }
   
-
+document.write( data.Countries[58].TotalConfirmed );
 
 </script>
 <script src="secondjava.js"></script>
