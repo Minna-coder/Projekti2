@@ -1,7 +1,13 @@
 # Projekti2 
-Tämän projektin aiheena on ollut AJAX-kutsut, API-talous ja tiedon tuominen omaan web-ohjelmaan. Verkkoon tehdään AJAX-kysely, johonkin API-tietolähteella, josta saatu vastaus tulee XML- tai JSON-muodossa. Vastaus parsitaan ymmärrettävään muotoon. Tietomassasta kaivetaan esiin haluttu data ja tehdään koodaamalla html:n, javascripitin ja css-tyylisivun avulla toimivaksi kokonaisuudeksi, ts. haluntunlaiseksi omaksi web-sovellukseksi.
-**Tehtävänanto** on ollut ymmärrettävä: AJAX-haun tekeminen (kaksi erilaista tapaa) jostakin API-tietolähteestä, saadun tiedon parsiminen halutunlaiseksi (määritelty joitakin toiminnallisuuksia), työn tuominen Git-Hubista Netlifyhyn.
-**Tavoite** oli tehdä sovellus nimeltä Covid-datapankki, jossa olisi ollut hakukenttä tai alasvetovalikko esim. maa tai kaupunki. Valitusta kohteesta (maa/kaupunki) pääsisi tarkastelemaan erinäisiä lukemia esim. linkkien tai alasvetolaatikon kautta.
-**Tehtävän toteutus** 1. Loin Git-Hubiin repositorin (Projekti 2). 2. Jatkoin Visual Studio Codessa projektin työstämistä. 3. Valitsin API:n https://api.covid19api.com/summary. 4. Julkaisin työn Netlifyssä. Onnistuin työssäni kaikissa edellä mainituissa vaiheissa mutta työn loppuunsaattamisessa, eli ehkä tärkeimmässä vaiheessa, oli suuria haasteita. Saadun tiedon parsiminen siten, että saisin siitä muokattua toimivan web-sovelluksen, ei onnistunut halutunlaisesti. 
-**Oppimistavoite** Sain aiheena olevista asioista hyvän käsityksen annetun aikarajan puitteissa. Työn toteuksessa oli ongelmia lähinnä vain koodin kanssa. 
-**Huomioita** Oppimisen kannalta olisi hyvä, jos saisin tarkasteltavakseni esimerkinomaisesti kokonaisuuden, jolla saadaan "AJAX-toiminto parsimisineen Web-sovellukseksi" aikaan. Esim. kopiot index.html, main.js, tyyli.css -sivut, joilla saadaan aikaan kokonaisuus. Tässä oli hieman hahmotusongelmia itselläni, koska en ole niin harjaantunut koodaaja ja API oli uusia asia. 
+API-used: https://api.covid19api.com
+Koodaus: Visual Studio Code
+Html-, javascript ja css-tiedostot muodostavat sovelluksen "Covid-19 infoa"
+Git-Hub-tallennus ja Netlify-alustalla julkaisu.
+
+**Tehtävänanto** AJAX-haun tekeminen (kaksi erilaista tapaa) jostakin API-tietolähteestä, saadun tiedon parsiminen luettavaan muotoon pieneksi ohjelmaksi, työn tuominen Git-Hubista Netlifyhyn.
+**Tehtävän toteutus** 
+1. Loin Git-Hubiin repositorin (Projekti 2). 
+2. Jatkoin Visual Studio Codessa projektin työstämistä. 
+3. Valitsin API:n https://api.covid19api.com/summary. 
+4. Parsin tietoja esiin JSONilla. 
+5. Julkaisin työn Netlifyssä. 
