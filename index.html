@@ -12,24 +12,53 @@
       <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID Suomessa</button></div></a>
       <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID Ruotsissa</button></div></a>
       <a href="#"><div id="demo"><button type="button4" onclick="loadDoc4()">COVID Venäjällä</button></div></a>
+      <a href="#"><div id="demo"><button type="button4" onclick="loadDoc3()">COVID Global</button></div></a>
   </div>
-    
-  <div class="content">
-        <h2>Covid-19 infoa</h2>
-  <p>Päivitä sivu selaimen refresh nuolesta! Nappien takaa pääset Suomen, Ruotsin ja globaaliin dataan.</p>
-  <p>Jotakin näin hienoa olisi kiva ollut saada aikaan! Lähde: <strong>Covid19api</strong> https://www.covidpanel.fr/</p><br>
-  <p>Valitse maa:
-    <select name="mySelect" id="city" onchange="">
-      <option value="Finland">Finland</option>
-      <option value="Sweden">Sweden</option>
-      <option value="Russia">Russia</option>
-    </select>
-  <br>
-  <br>
-  Or type in a search query: <input id="citysearch"><button id="search">Search</button>
-  </p>
-
   
+  <div class="content">
+        <h2><strong>Covid-19 infoa</strong></h2>
+  <p>Vasemman navigoinnin nappien takaa pääset raakadataan Suomen, Ruotsin, Venäjän ja globaalista koronatilanteesta. Päivitä sivu selaimen nuolesta! .</p>
+  <br>
+  <form action=""> 
+    <select name="customers" onchange="showCustomer(this.value)">
+    <option value="">Valitse maa:</option>
+    <option value="ALFKI">Finland</option>
+    <option value="NORTS ">Sweden</option>
+    <option value="WOLZA">Russia</option>
+    </select>
+
+    </form>
+    <br>
+    <div id="loadDoc()">Maatiedot tulostuvat tähän...</div>
+    
+    <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID Suomessa</button></div></a>
+
+
+    <script>
+    function showCustomer(str) {
+      var xhttp;    
+      if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+      }
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("https://api.covid19api.com/dayone/country/finland").innerHTML = this.responseText;
+          
+        }
+      };
+      xhttp.open("GET", "suomi.js"+str, true);
+      xhttp.send();
+    }
+    </script>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
 
     <button type="button" onclick="loadDoc3()">COVID goes GLOBAL</button>
     <button type="button" onclick="loadJSONDoc()">Send AJAX Request for JSON</button>
@@ -90,10 +119,10 @@ function loadDoc4() {
   xmlhttp.send();
 }
   
-document.write( data.Countries[58].TotalConfirmed );
+
 
 </script>
-<script src="secondjava.js"></script>
+<script src="secondPäivitä.js"></script>
 </head>   
 
 </body>
