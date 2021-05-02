@@ -1,85 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
 <title>COVID-19 </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="csssecond.css"> 
 
+
+<script src="jsmain.js"></script>
+
 <body>
     
   <div class="sidenav">
-      <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID Suomessa</button></div></a>
-      <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID Ruotsissa</button></div></a>
-      <a href="#"><div id="demo"><button type="button4" onclick="loadDoc4()">COVID Venäjällä</button></div></a>
-      <a href="#"><div id="demo"><button type="button4" onclick="loadDoc3()">COVID Global</button></div></a>
+      <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID FIN RAW DATA</button></div></a>
+      <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID SE RAW DATA</button></div></a>
+      <a href="#"><div id="demo"><button type="button4" onclick="loadDoc4()">COVID RU RAW DATA</button></div></a>
+ 
+      
   </div>
   
   <div class="content">
         <h2><strong>Covid-19 infoa</strong></h2>
-  <p>Vasemman navigoinnin nappien takaa pääset raakadataan Suomen, Ruotsin, Venäjän ja globaalista koronatilanteesta. Päivitä sivu selaimen nuolesta! .</p>
+  <p>Päivitä nappien tiedot selaimen nuolesta!</p>
   <br>
-  <form action=""> 
-    <select name="customers" onchange="showCustomer(this.value)">
-    <option value="">Valitse maa:</option>
-    <option value="ALFKI">Finland</option>
-    <option value="NORTS ">Sweden</option>
-    <option value="WOLZA">Russia</option>
-    </select>
-
-    </form>
-    <br>
-    <div id="loadDoc()">Maatiedot tulostuvat tähän...</div>
+  
     
-    <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID Suomessa</button></div></a>
+  <button type="button" onclick="loadJSONDoc()">Maakohtaisia tietoja ja raakadataa</button>
 
-
-    <script>
-    function showCustomer(str) {
-      var xhttp;    
-      if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-      }
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("https://api.covid19api.com/dayone/country/finland").innerHTML = this.responseText;
-          
-        }
-      };
-      xhttp.open("GET", "suomi.js"+str, true);
-      xhttp.send();
-    }
-    </script>
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-    <button type="button" onclick="loadDoc3()">COVID goes GLOBAL</button>
-    <button type="button" onclick="loadJSONDoc()">Send AJAX Request for JSON</button>
-    <br>
-
-  <script>
-      function loadDoc3() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("demo").innerHTML =
-            this.responseText;
-          }
-        };
-        xmlhttp.open("GET", "https://api.covid19api.com/summary", true);
-        xmlhttp.send();
-      }
-  </script>
+  
+    <div id="tabledata">
       
-  </div>
-
+  
+    </div>
+    <br>
+  
+    
+      <div id="content"></div>
 
 <script>
 
@@ -117,12 +74,11 @@ function loadDoc4() {
   };
   xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/russia", true);
   xmlhttp.send();
+  
 }
   
-
-
 </script>
-<script src="secondPäivitä.js"></script>
+
 </head>   
 
 </body>
