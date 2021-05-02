@@ -22,7 +22,6 @@ console.log(jsonObj);
 
 printJSONTable(jsonObj);
 
-
 function printJSONTable(jsonObj) {
 
 	var data = jsonObj;
