@@ -29,10 +29,10 @@ function printJSONTable(jsonObj) {
 	var out = "<table>";
 
         out += '<tr>';
-        out += '<td>' + "Maa" + '<td>';
-        out += '<td>' + "Vahvistettuja" + '<td>';
-        out += '<td>' + "Parantunteita" + '<td>';
-        out += '<td>' + "Kuolleita" + '<td>'; 
+        out += '<td>' + "<strong>Maa</strong>" + '<td>';
+        out += '<td>' + "<strong>Vahvistettuja</strong>" + '<td>';
+        out += '<td>' + "<strong>Parantunteita</strong>" + '<td>';
+        out += '<td>' + "<strong>Kuolleita</strong>" + '<td>'; 
 		out += '<tr>';
 		out += '<td>' + data.Countries[58].Country + '<td>';
         out += '<td>' + data.Countries[58].TotalConfirmed + '<td>';
